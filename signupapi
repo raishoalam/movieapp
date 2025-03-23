@@ -1,0 +1,9 @@
+POST http://localhost:3008/api/auth/register
+POST http://localhost:3008/api/auth/login
+GET http://localhost:3008/api/movies
+GET http://localhost:3008/api/movies/1
+POST http://localhost:3008/api/reviews
+PUT http://localhost:3008/api/reviews/1
+
+POST http://localhost:3008/api/reviews/1/like
+POST http://localhost:3008/api/reviews/1/unlike

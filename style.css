@@ -1,0 +1,109 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Container */
+.bg-container {
+    background-image: url('images/netflix.jpeg');  /* Replace with your image path */
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;  /* Make it take full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    position: relative;  /* Needed for overlay */
+}
+
+/* Overlay for Transparent Background */
+.bg-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Signup Form */
+#signupForm {
+    width: 400px;  /* Fixed width */
+      /* Fixed height */
+    padding: 40px;
+    background-color: rgba(49, 48, 48, 0.8); /* Transparent black */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-top: 30px;
+}
+h1{
+    color: orange;
+    text-align: center;
+    padding-bottom: 10px;
+}
+/* Hover Effect on Form */
+#signupForm:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;  /* White background for input */
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Hover and Focus Effects */
+input:hover,
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Green shadow on focus */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: red;  /* Red button */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: darkred;  /* Darker red when hovering */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 480px) {
+    #signupForm {
+        width: 90%;  /* Take more width on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
